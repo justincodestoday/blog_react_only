@@ -1,0 +1,17 @@
+-- Install tailwindcss or just use tailwind flowbite
+npm i -D tailwindcss postcss autoprefixer
+
+-- Initiate tailwind
+npx tailwindcss init -p
+
+-- Install Daisy UI package
+npm i daisyui
+
+npm i --save-dev @types/daisyui
+
+
+json() gets the JSON objects in JavaScript format
+
+json.stringify() gets the JSON objects in the string form
+
+JSON.parse() converts the string back into JSON objects 
