@@ -21,12 +21,14 @@ function App() {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
+        if (!post.title) return alert("Please fill in the title");
+        if (!post.body) return alert("Please fill in the body");
         let posts = JSON.parse(localStorage.getItem("posts"));
         posts.unshift(post);
-        e.target.reset();
         localStorage.setItem("posts", JSON.stringify(posts));
         getPosts();
-        setPost({ ...post, id: uuid() });
+        e.target.reset();
+        setPost({ ...post, id: uuid(), title: "", body: "" });
     };
 
     const getPosts = async () => {
