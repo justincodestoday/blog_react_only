@@ -20,12 +20,12 @@ function Post({ data, deletePost, editPost }) {
     };
 
     return (
-        <Card className="m-5 border-black bg-slate-600 shadow-md shadow-black">
+        <Card className="m-5 border-slate-600 bg-slate-600 shadow-sm shadow-black">
             <Card.Body className="text-white">
                 <Card.Title tag="h2" className="font-bold">
-                    {data.title}
+                    {post.title}
                 </Card.Title>
-                <p>{data.body}</p>
+                <p>{post.body}</p>
                 <Card.Actions className="justify-end">
                     <Button
                         color="accent"
@@ -45,7 +45,7 @@ function Post({ data, deletePost, editPost }) {
 
                         <Modal.Body className="">
                             <form onSubmit={onSubmitHandler}>
-                                <div className="form-control w-full max-w">
+                                <div className="form-control w-full">
                                     <label className="label">
                                         <span className="label-text font-bold">
                                             Title
@@ -60,7 +60,7 @@ function Post({ data, deletePost, editPost }) {
 
                                 <br />
 
-                                <div className="form-control w-full max-w">
+                                <div className="form-control w-full">
                                     <label className="label">
                                         <span className="label-text font-bold">
                                             Body
